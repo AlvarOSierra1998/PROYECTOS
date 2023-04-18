@@ -1,0 +1,1423 @@
+@font-face {
+
+  font-family: 'elden';
+
+  src: url("../fonts/OptimusPrincepsSemiBold.ttf")
+}
+
+@import 'animate.css';
+
+* {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'elden';
+}
+
+#body2 {
+  background-repeat: no-repeat;
+  background-image: url(../img/descarga.gif);
+  background-size: 40%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-position-x: center;
+  background-position-y: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.container2 {
+  width: 90%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.cardd_outer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+}
+
+.cardd {
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  min-height: 400px;
+  text-align: center;
+  color: #fff;
+  background-color: #ffbb000b;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+    0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1),
+    0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cardd:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+
+.cardd:after {
+  opacity: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.cardd:hover:after {
+  opacity: 1;
+  transition: opacity calc(var(--d) * 1.5) var(--e);
+}
+
+.cardd:nth-child(1):before {
+  background-image: url(../img/ER_Icon_weapon_Erdtree_Seal.png);
+}
+
+.cardd:nth-child(2):before {
+  background-image: url(../img/ER_Class_Vagabond.png);
+}
+
+.cardd:nth-child(3):before {
+  background-image: url(../img/ER_Icon_weapon_Golden_Order_Greatsword.png);
+}
+
+.cardd:nth-child(4):before {
+  background-image: url(../img/golden_order_principia.png);
+}
+
+#comienzo {
+  position: absolute;
+  color: #d5a821;
+  margin-bottom: 40%;
+  font-family: 'elden';
+  font-size: 18px;
+}
+
+blockquote {
+  text-align: center;
+  margin-top: 122px;
+}
+
+.volver {
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+}
+
+.log {
+  left: -25%;
+  top: 120%;
+  margin: auto;
+  position: absolute;
+  width: 117px;
+  height: 220px;
+}
+
+.log:hover {
+
+  border-radius: 12px;
+}
+
+#au {
+  margin-top: 120px;
+  position: absolute;
+  margin-left: 460px;
+  font-family: 'elden';
+  color: #ff9100;
+}
+
+#tx {
+  position: relative;
+  margin-top: 12px;
+  margin-right: auto;
+}
+
+.botones {
+  position: relative;
+  margin-left: 10px;
+  margin-top: 12px;
+  ;
+}
+
+.content2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+
+.content2>*+* {
+  margin-top: 1rem;
+}
+
+.content3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+
+.content>*+* {
+  margin-top: 1rem;
+}
+
+#se {
+  margin-right: 822px;
+  position: absolute;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+#cent {
+  align-items: center;
+  position: relative;
+  margin: auto;
+  margin-left: 46%;
+
+}
+
+.copy {
+  font-size: 15px;
+  font-style: 'elden';
+  line-height: 25px;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0d0d0d;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .cardd:after {
+    transform: translateY(0);
+  }
+
+  .content2 {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+
+  .content2>*:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .cardd:hover,
+  .cardd:focus-within {
+    align-items: center;
+  }
+
+  .cardd:hover:before,
+  .cardd:focus-within:before {
+    transform: translateY(-4%);
+  }
+
+  .cardd:hover:after,
+  .cardd:focus-within:after {
+    transform: translateY(-50%);
+  }
+
+  .cardd:hover .content2,
+  .cardd:focus-within .content2 {
+    transform: translateY(0);
+  }
+
+  .cardd:hover .content2>*:not(.title),
+  .cardd:focus-within .content2>*:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cardd:focus-within:before,
+  .cardd:focus-within:after,
+  .cardd:focus-within .content2,
+  .cardd:focus-within .content2>*:not(.title) {
+    transition-duration: 0s;
+  }
+}
+
+#body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-image: url(../img/MALENIA.gif);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'elden';
+  color: #ff9100;
+  font-size: 200px;
+  -webkit-text-stroke: 3px rgb(0, 0, 0);
+  padding-top: 100px;
+}
+
+#imagen {
+  width: 600px;
+  height: 90px;
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 22px 22px 22px black;
+  background-color: #000000;
+
+}
+
+img {
+  margin-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 200ms ease-in-out transform,
+    200ms ease-in-out filter;
+}
+
+#imgcard {
+  position: absolute;
+  top: -13px;
+  left: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 60%;
+  transform: translate(100%, -50%);
+  background-color: rgba(98, 70, 12, 0.4);
+  padding: 2rem 1rem;
+  color: #fff;
+  text-align: right;
+  transition: 200ms ease-in-out transform;
+}
+
+h2 {
+  text-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+  font-family: 'elden';
+}
+
+.line {
+  width: 70px;
+  height: 5px;
+  background-color: #b66f13;
+  margin: 1rem 0 1rem auto;
+}
+
+p {
+
+  text-shadow: 0 0 .2rem rgba(0, 0, 0, .2);
+  margin-bottom: 1rem;
+  font-family: 'elden';
+}
+
+button {
+  padding: .3rem 1.5rem;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out background-color,
+    200ms ease-in-out color;
+}
+
+button:hover {
+  background-color: #fff;
+  color: rgba(169, 101, 0, .8);
+}
+
+.card:hover .content {
+  transform: translate(0, -50%);
+}
+
+.card:hover img {
+  transform: scale(1.2);
+  filter: blur(1px);
+}
+
+img {
+  opacity: calc(0.9);
+}
+
+.ord {
+  border-radius: 40px 40px;
+
+  will-change: transform;
+  transition: transform 0.9;
+
+  -webkit-animation: appear 115s forwards;
+  animation: appear 30s backwards;
+  animation-iteration-count: infinite;
+}
+
+/*Lore*/
+#bodyy {
+  background-color: #000000;
+}
+
+#headL {
+  background: url(../img/fondo.jpg) no-repeat;
+  padding-top: 61.93333333%;
+  background-size: cover;
+}
+
+#mehe {
+  text-align: center;
+  background-color: #181414;
+  color: #d37a05;
+  padding: 20px;
+  font-size: 19px;
+  position: static;
+}
+
+header img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45.8%;
+}
+
+.sect {
+  margin-left: 33%;
+  margin-top: 270px;
+  display: flex;
+  height: 430px;
+}
+
+.sect img {
+
+  width: 100px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .3s ease;
+}
+
+.sect img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+#fonme {
+  background-image: url(../img/rada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*.buta{
+  position: absolute;
+  left: 1px;
+  top: 90px;
+}
+aside{
+  position: absolute;
+  top: 104px;
+  padding: 2rem;
+  background-color: #181414;
+  height:98vh;
+  color: #fff;
+}*/
+
+#headL2 {
+  background: url(../img/elden-ring-final-preview-1644492994739.jpg);
+  padding-top: 61.93333333%;
+  background-size: cover;
+  background-position: center;
+}
+#headL3 {
+  padding-top: 6%;
+}
+
+
+.warrh1 {
+  position: fixed;
+  top: 2rem;
+  right: 22rem;
+  font-size: 12vw;
+  line-height: .8;
+  margin-top: 0;
+  text-align: center;
+  color: #000000;
+  -webkit-text-stroke: 3px rgba(217, 131, 18, 0.584);
+}
+.warrh2 {
+  position: absolute;
+  top: 2rem;
+  right: 22rem;
+  font-size: 12vw;
+  line-height: .8;
+  margin-top: 0;
+  text-align: center;
+  color: #000000;
+  -webkit-text-stroke: 1px rgba(217, 131, 18, 0.584);
+}
+
+
+header h1 {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 12vw;
+  line-height: .8;
+  margin-top: 0;
+  text-align: center;
+}
+
+header h1 span {
+  display: block;
+  font-size: 8.75vw;
+}
+
+main {
+  color: #fff;
+  background: #181414;
+  position: relative;
+  border: 1px solid #fff;
+  font-size: 1.4rem;
+  padding: 2rem 25%;
+  line-height: 1.6;
+}
+
+.mainwar {
+  overflow: hidden;
+  color: #fff;
+  background-image: url(../img/rada.jpg);
+  position: relative;
+  background-size: auto;
+  background-repeat: repeat;
+  border: 3px solid #da950b;
+  font-size: 1.4rem;
+  padding-left: 12em;
+  line-height: 1.6;
+}
+
+
+.secciones {
+  border: 5px solid #5271767a;
+  border-style: dashed;
+  background-image: url(../img/ER_golden_order.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  box-shadow: 22px 22px 22px black;
+  color: #ffffff;
+  background-color: #000000df;
+  border-radius: 12px;
+  position: relative;
+  font-size: 1.4rem;
+  padding: 2rem 25%;
+  width: 120%;
+
+  line-height: 1.9;
+}
+
+.secciones2 {
+  border: 5px solid #5271767a;
+  border-style: dashed;
+  background-image: url(../img/ER_Class_Vagabond.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  box-shadow: 22px 22px 22px black;
+  color: #ffffff;
+  background-color: #000000df;
+  border-radius: 12px;
+  position: relative;
+  font-size: 1.4rem;
+  padding: 2rem 25%;
+  width: 120%;
+  line-height: 1.9;
+}
+
+.secciones3 {
+  border: 5px solid #5271767a;
+  border-style: dashed;
+  box-shadow: 22px 22px 22px black;
+  color: #ffffff;
+  background-color: #000000df;
+  border-radius: 12px;
+  position: relative;
+  font-size: 1.4rem;
+  padding: 2rem 25%;
+  width: 120%;
+  line-height: 1.9;
+}
+
+td>img {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 1px;
+}
+
+/*amor resistance colors*/
+#matd {
+  color: rgb(123, 217, 254);
+}
+
+#matd:hover {
+  background-color: rgb(123, 217, 254);
+  color: #000000;
+}
+
+#firtd {
+  color: rgb(215, 103, 6);
+}
+
+#firtd:hover {
+  background-color: rgb(215, 6, 27);
+  color: #000000;
+}
+
+#litd {
+  color: rgb(215, 198, 6);
+}
+
+#litd:hover {
+  background-color: rgb(215, 198, 6);
+  color: #000000;
+}
+
+#vita{
+  color: #28a41a;
+}
+#vita:hover{
+  background-color:#28a41a;
+  color: #000000;
+}
+
+#Holtd {
+  color: rgb(238, 200, 146);
+}
+
+#Holtd:hover {
+  background-color: rgb(238, 200, 146);
+  color: #000000;
+}
+
+
+
+
+@media all and (max-width: 700px) {
+  .secciones {
+    padding: 3rem;
+  }
+
+}
+
+#bodyy {
+  width: auto;
+  height: auto;
+}
+
+.izer {
+  text-align: left;
+}
+
+.izer:hover {
+  background-color: #7e7c72;
+  color: #1e0f0f;
+}
+
+#tituta {
+  background-color: #4a4235;
+  color: #e0c112;
+}
+
+
+.mainwar>.gif {
+  background-image: url(../img/descarga.gif);
+  background-repeat: no-repeat;
+  background-size: calc(500px);
+  background-position: center;
+  position: relative;
+  width: 120%;
+  padding: 6rem 12%;
+  background-color: #000000;
+  border-radius: 72px;
+  box-shadow: 22px 22px 22px black;
+  margin: auto;
+}
+
+
+div>img {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 30%;
+
+}
+
+
+section>img {
+  position: absolute;
+  left: -520px;
+  top: 0px;
+  width: auto;
+  height: auto;
+}
+
+.lorestat {
+  margin: auto;
+  background-image: url(../img/elden-ring-border-leaf.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.lorestatt {
+ position: absolute;
+ left: 3px;
+}
+
+.armorsep {
+  margin: auto;
+  background-image: url(../img/elden-ring-border-leaf.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 100px;
+  
+}
+
+.lorestat:hover {
+  text-indent: 6%;
+  transition: all;
+  transition-duration: .9s;
+  color: #a41a1a;
+}
+
+.bold {
+  text-decoration: dotted;
+  color: #a4941a;
+  font-weight: bold;
+}
+
+thead,
+tr,
+th,
+td {
+  border: 1px solid wheat;
+  text-align: center;
+  width: 30%;
+}
+
+table {
+
+  margin-left: 89px;
+  border: 1px solid wheat;
+}
+
+#att {
+  text-align: center;
+  margin-left: 122px;
+}
+
+.rltl,
+.pos {
+  position: absolute;
+  display: flex;
+  top: -250px;
+  left: 281px;
+  margin-left: 9%;
+}
+
+.pos2 {
+  position: absolute;
+  left: 312px;
+}
+
+.tabsum {
+  position: absolute;
+  left: -122px;
+  top: 60px;
+}
+
+#armr {
+  margin-left: 6px;
+}
+
+th:hover {
+  transition: all;
+  transition-duration: .8s;
+}
+
+td:hover {
+  color: rgb(149, 61, 23);
+  transition: .5s ease-in;
+  overflow: hidden;
+
+}
+
+/*#secciones2{
+  color: #fff;
+  background-color: #a41a1a;
+  margin-bottom: 120px;
+ }
+ */
+#imgtd {
+  margin: auto;
+}
+
+#imgtd:hover {
+  color: antiquewhite;
+  transition: .5s ease-in;
+  background-image: url(../img/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#imgtd2 {
+  margin: auto;
+}
+
+#imgtd2:hover {
+  color: antiquewhite;
+  transition: .5s ease-in;
+  background-image: url(../img/male2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.tdda {
+  background-color: #4a4235;
+}
+
+.tdda:hover {
+  background-color: #7e7c72;
+  color: #1e0f0f;
+}
+
+.tdda {
+  background-color: #4a4235;
+}
+
+.tdda:hover {
+  background-color: #7e7c72;
+  color: #1e0f0f;
+}
+
+
+
+#imgseccion1 {
+  background-image: url(../img/ER_Icon_weapon_Bastard_Sword.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -12px;
+}
+
+#sec {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 1%;
+  background-color: #b66f13;
+}
+
+/*WEAPONS*/
+
+.container3 {
+  display: flex;
+  width: 100%;
+  padding: 20% 2%;
+  box-sizing: border-box;
+  height: 90vh;
+}
+
+.box {
+  flex: 1;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+  line-height: 0;
+  color: #fff;
+}
+
+.box>img {
+  width: 100%;
+  height: calc(200% - 10vh);
+  object-fit: contain;
+  object-fit: scale-down;
+  transition: .5s;
+}
+
+.box>span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 1vh;
+  line-height: 2.6;
+}
+
+.box:hover {
+  flex: 1 1 50%;
+}
+
+.box:hover>img {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/Age-of-Order-Ending-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -220px;
+  border-radius: 22px 22px 22px;
+  box-shadow: 10px 31px 31px black;
+}
+
+.box:hover>span {
+  width: 100%;
+  height: 100%;
+}
+
+#fond {
+  background-image: url(../img/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#lt {
+  position: absolute;
+  top: 60px;
+  left: 25%;
+  font-size: 25px;
+  color: #d37a05;
+  float: left;
+}
+
+li {
+  margin: auto;
+  position: relative;
+  left: -400px;
+
+}
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+}
+
+.animate__animated.animate__fadeInRight {
+  --animate-duration: 8s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.6s;
+}
+
+/* box1*/
+.box1 {
+  flex: 1;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+  line-height: 0;
+  color: #fff;
+}
+
+.box1>img {
+  width: 100%;
+  height: calc(200% - 10vh);
+  object-fit: contain;
+  object-fit: scale-down;
+  transition: .5s;
+}
+
+.box1>span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 1vh;
+  line-height: 2.6;
+}
+
+.box1:hover {
+  flex: 1 1 50%;
+}
+
+.box1:hover>img {
+  width: 100%;
+  height: 200%;
+  background-image: url(../img/WARR.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 22px 22px 22px;
+  box-shadow: 10px 31px 31px black;
+}
+
+.box1:hover>span {
+  width: 100%;
+  height: 100%;
+}
+
+/* box2*/
+
+.box2 {
+  flex: 1;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+  line-height: 0;
+  color: #fff;
+}
+
+.box2>img {
+  width: 100%;
+  height: calc(200% - 10vh);
+  object-fit: contain;
+  object-fit: scale-down;
+  transition: .5s;
+}
+
+.box2>span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 1vh;
+  line-height: 2.6;
+}
+
+.box2:hover {
+  flex: 1 1 50%;
+}
+
+.box2:hover>img {
+  width: 100%;
+  height: 200%;
+  background-image: url(../img/rada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -220px;
+  border-radius: 22px 22px 22px;
+  box-shadow: 10px 31px 31px black;
+}
+
+.box2:hover>span {
+  width: 100%;
+  height: 100%;
+}
+
+/* box3*/
+.box3 {
+  flex: 1;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+  line-height: 0;
+  color: #fff;
+}
+
+.box3>img {
+  width: 100%;
+  height: calc(200% - 10vh);
+  object-fit: contain;
+  object-fit: scale-down;
+  transition: .5s;
+}
+
+.box3>span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 1vh;
+  line-height: 2.6;
+}
+
+.box3:hover {
+  flex: 1 1 50%;
+}
+
+.box3:hover>img {
+  width: 100%;
+  height: 200%;
+  background-image: url(../img/mago.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -70px;
+  border-radius: 22px 22px 22px;
+  box-shadow: 10px 31px 31px black;
+}
+
+.box3:hover>span {
+  width: 100%;
+  height: 100%;
+}
+
+/*RESPONSIVE ASIDE*/
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #181414;
+  padding-block: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #b66f13;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#toggler,
+.navbar label {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #toggler:checked~.menu {
+    max-height: 100%;
+  }
+}
+
+/*RESPONSIVE NAVBAR*/
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 100%;
+  background: #181414;
+  transition: all 0.4s;
+}
+
+body.open .sidebar {
+  width: 240px;
+}
+
+.sidebar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  padding: 0 1.25rem 0 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-left: 3px solid transparent;
+  transition: all 0.4s;
+}
+
+.sidebar-header:hover {
+  border-left: 3px solid #bdbdbd;
+}
+
+.sidebar-burger {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+}
+
+.sidebar-burger>i,
+body.open .sidebar-burger>i {
+  font-size: 25px;
+  color: #f9f9f9;
+  transition: all 0.4s;
+}
+
+.sidebar-burger:hover>i,
+body.open .sidebar-burger:hover>i {
+  color: #bdbdbd;
+}
+
+.golbor {
+  background-image: url(../img/elden-ring-border-leaf.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 900px;
+  height: 50px;
+  left: 90px;
+  top: 12px;
+  background-size: cover;
+}
+
+.golbor:hover {
+  filter: contrast(3);
+  transition: all;
+  transition-duration: 2s;
+}
+
+.golbor2 {
+  background-image: url(../img/elden-ring-border-leaf_invertido.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 900px;
+  height: 50px;
+  left: 1203px;
+  top: -1px;
+  background-size: cover;
+}
+
+.golbor3 {
+  background-image: url(../img/elden-ring-border-leaf_invertido.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 900px;
+  height: 50px;
+  left: 700px;
+  top: 250px;
+  opacity: 0.2;
+  background-size: cover;
+}
+
+.golbor4 {
+  background-image: url(../img/elden-ring-border-leaf_invertido.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 900px;
+  height: 50px;
+  left: 700px;
+  top: 790px;
+  opacity: 0.2;
+  background-size: cover;
+}
+
+em {
+  margin: auto;
+  width: 2560px;
+  height: 1440px;
+}
+
+.sidebar-logo {
+
+  width: 90%;
+  height: 80px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+body.open .sidebar-logo {
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.sidebar-menu {
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar-menu>button {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 55px;
+  font-family: "Ubuntu";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 0 22px;
+  border-left: 3px solid transparent;
+  transition: all 0.4s;
+}
+
+.sidebar-menu>button:hover {
+  border-left: 3px solid #f9f9f9;
+}
+
+.sidebar-menu>button.has-border {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu>button>i {
+  font-size: 25px;
+  color: #f9f9f9;
+  transition: all 0.4s;
+}
+
+.sidebar-menu>button:hover>i,
+.sidebar-menu>button:hover>span {
+  color: #bdbdbd;
+}
+
+.sidebar-menu>button>span {
+  color: #f9f9f9;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+body.open .sidebar-menu>button>span {
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+/*pruebas*/
+
+.bodyh { 
+  background-color: #000000;
+  font-family: " elden", sans-serif;
+  margin: 0; 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sech { 
+  padding: 2% 15%; 
+  margin: 0 auto;
+  color: #b66f13;
+  font-size: 1.3rem;
+}
+
+/*HEADERHERO*/
+.hea3{
+  
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 60px;
+  top: -12px;
+  width: auto;
+  opacity: 0.2;
+}
+
+svg {
+
+  font-weight: bold;
+  max-width: 600px;
+  height: auto;
+}
+.imgh{
+  width: auto;
+  height: auto;
+
+}
+.img-holder{
+opacity: 0.1;
+}
+section>h1{
+  color:#d3af1f;
+}
+section>h1:hover{
+  text-indent: 320px;
+  transition: all;
+  transition-duration: .5s;
+  color: #a41a1a;
+  background-image: url(../img/BON.gif);
+  background-repeat: no-repeat;
+  
+
+}
+
+
+
