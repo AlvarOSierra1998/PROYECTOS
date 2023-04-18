@@ -731,6 +731,15 @@ section>img {
  position: absolute;
  left: 3px;
 }
+.lorestatt2 {
+  position: absolute;
+  left: 700px;
+ }
+ .lorestatt3 {
+  position: absolute;
+  left: 1400px;
+  top: 2280px;
+ }
 
 .armorsep {
   margin: auto;
