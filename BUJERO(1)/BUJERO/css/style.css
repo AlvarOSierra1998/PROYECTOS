@@ -1,0 +1,591 @@
+:root {
+  --fondo: #000000;
+  --letrasyNav: #d8d8d8;
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+@import 'animate.css';
+
+@font-face {
+
+  font-family: 'Bujero';
+
+  src: url("../fonts/GRAVEDIGGER\ PERSONAL\ USE.ttf")
+}
+
+
+
+
+
+html {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--letras);
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #49484854;
+  height: auto;
+  width: 35%;
+  font-size: 62.5%;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 20px 10px 20px rgba(73, 72, 72, 0.226);
+  border: 7px solid rgba(0, 0, 0, 0.5);
+
+}
+
+.secFija {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+}
+
+#imagenagujero {
+  margin: auto 30px 10px 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(83, 83, 83, 0.37);
+  
+
+}
+
+
+#titulo {
+  letter-spacing: 10px;
+  text-align: center;
+  color: var(--letrasyNav);
+  font-size: 10rem;
+  margin: 10px 12px 30px 35px;
+  font-family: 'Bujero';
+
+
+}
+
+.navegacion {
+  background-color: #d8d8d800;
+  border-radius: 50%;
+  padding: 0.2rem;
+  margin: 20px 10px 20px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #8b8b8b;
+  padding: 0.65rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.navegacion:hover {
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  transition: ease-in-out .22s;
+  background-color: #ffffff;
+  box-shadow: #000000f8 3px 4px 5px 6px;
+
+
+}
+
+em {
+  color: var(--letrasyNav);
+  font-size: 1rem;
+
+
+}
+
+/*PRUEBA*/
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+.hero {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://i.picsum.photos/id/100/2500/1656.jpg?hmac=gWyN-7ZB32rkAjMhKXQgdHOIBRHyTSgzuOK6U0vXb1w');
+  background-position: center
+}
+
+.hero:after {
+  content: "";
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  height: 60000%;
+  width: 300%;
+  position: fixed;
+  opacity: 0.1;
+  animation: animateGrain .10s steps(10) infinite;
+}
+
+@keyframes animateGrain {
+
+  0%,
+  100% {
+    transform: translate(0, 0)
+  }
+
+  10% {
+    transform: translate(-5%, -10%)
+  }
+
+  20% {
+    transform: translate(-15%, -20%)
+  }
+
+  30% {
+    transform: translate(-5%, -10%)
+  }
+
+  40% {
+    transform: translate(-15%, -20%)
+  }
+
+  50% {
+    transform: translate(-5%, -10%)
+  }
+
+  60% {
+    transform: translate(-15%, -20%)
+  }
+
+  70% {
+    transform: translate(-5%, -10%)
+  }
+
+  80% {
+    transform: translate(-15%, -20%)
+  }
+
+  90% {
+    transform: translate(-5%, -10%)
+  }
+
+  100% {
+    transform: translate(-15%, -20%)
+  }
+
+}
+
+.headerText {
+  color: white;
+  font-size: 3rem;
+  z-index: 5;
+  margin: -220px 20px 20px 10px;
+}
+
+.section2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+.bottomArrow {
+  width: 10em;
+  height: 10em;
+  ;
+  background-color: transparent;
+  transform: rotateZ(45deg);
+  border-width: 0 10px 10px 0;
+  border-color: white;
+  border-style: dotted;
+  z-index: 5;
+  margin: 10px 20px -427px 0px;
+}
+
+/*animacion*/
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+  /* don't forget to set a duration! */
+}
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__fadeIn {
+  --animate-duration: 10s;
+}
+
+/*prueba 2*/
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px;
+  color: var(--letrasyNav);
+  font-size: 1rem;
+}
+
+.--wrapper--titulos {
+  font-size: 5rem;
+  font-family: 'Bujero';
+}
+.--wrapper--Subtitulos {
+  font-family: 'Bujero';
+}
+
+.--wrapper--description {
+  font-size: 62.5%;
+  font-size: 1rem;
+}
+
+.--wrapper--img {
+  width: 50%;
+  height: 30%;
+  border-radius: 10%;
+  filter: grayscale(1);
+  cursor: pointer;
+  border: 1PX solid var(--letrasyNav);
+}
+
+.--wrapper--img:hover {
+  border-radius: 10%;
+  filter: grayscale(0);
+  transition: .4s ease;
+  scale: 1.2;
+  border: none;
+  
+
+
+}
+
+/*bujero imagenes*/
+
+.--wrapper--contenedor--img {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit,
+      minmax(150px, 1fr));
+  gap: 22px;
+  place-items: center;
+}
+
+.--wrapper--contenedor--img>img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 30px #000;
+
+
+
+}
+
+/*modal*/
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+figure {
+  display: inline-block;
+  width: 100%;
+  margin: 25px;
+}
+
+
+.modalImg {
+  cursor: pointer;
+  max-width: 100%;
+  height: 20%;
+  margin: auto;
+  opacity: 0.6;
+
+}
+
+.modalImg:hover {
+  opacity: 1;
+
+}
+
+
+.modal {
+  display: none;
+  /* ocultar por defecto */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: solid 1px;
+  background: rgb(0, 0, 0);
+  padding-top: 5%;
+  overflow: hidden;
+  z-index: 999;
+}
+a{
+  text-decoration: none;
+}
+
+.archimg {
+  width: 13rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  filter: grayscale(1);
+  cursor: pointer;
+  margin: auto 12px 12px 12px;
+  border: 1px solid var(--letrasyNav);
+}
+
+.archimg:hover {
+  filter: grayscale(0);
+  transition: ease .4s;
+  scale: 1.2;
+
+}
+
+#modalImg {
+  position: fixed;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* center to window */
+}
+
+
+#modalClose {
+  position: absolute;
+  cursor: pointer;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  transition: all;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+#modalText {
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: #ccc;
+  font-size: 2rem;
+  font-family: 'diablo';
+}
+
+
+/* animaciones */
+
+#modalText {
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  margin: -15px 300px 0 1030px;
+  font-size: 10rem;
+  font-family: 'Bujero';
+  /*font-family:*/
+}
+
+/*
+@keyframes zoom {
+  from {
+      transform: scale(0)
+  }
+
+  to {
+      transform: scale(1)
+  }
+}
+  
+/* a partir de aqui el CSS de las animaciones */
+
+@keyframes anim-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes anim-up {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes anim-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes anim-left {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes anim-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.anim-up,
+.anim-down,
+.anim-left,
+.anim-right,
+.anim-fade-in {
+  animation-duration: 1s;
+  /* la animacion dura X segundos */
+  animation-delay: 0.5s;
+  /* esperamos X segundos antes de hacer la animacion */
+  animation-fill-mode: both;
+  /* aplica estilos de la animacion antes y despues de reproducirla */
+}
+
+.anim-up {
+  animation-name: anim-up;
+}
+
+.anim-down {
+  animation-name: anim-down;
+}
+
+.anim-left {
+  animation-name: anim-left;
+}
+
+.anim-right {
+  animation-name: anim-right;
+}
+
+.anim-fade-in {
+  animation-name: anim-fade-in;
+}
+
+.anim-pause-2 {
+  animation-delay: 2s;
+}
+
+/* la animacion empieza en 2 seg. */
+.anim-pause-3 {
+  animation-delay: 3s;
+}
+
+/* la animacion empieza en 3 seg. */
+.anim-pause-4 {
+  animation-delay: 4s;
+}
+
+/* la animacion empieza en 4 seg. */
+.anim-pause-5 {
+  animation-delay: 5s;
+}
+
+/* todas las animaciones pausadas */
+.paused * {
+  animation-play-state: paused;
+}
+
+
+/*prueba glicht*/
+.glitch {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 2500ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  opacity: 0.8;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  opacity: 0.8;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
