@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>responsive pagina</title>
+  <meta name="description" content="nefli" />
+  <link rel="prefetch" href="contacto.html" as="document" />
+  <link rel="preload" href="css/normalize.css" as="stylenormalize" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+    crossorigin="crossorigin" as="font" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="preload" href="css/style.css" as="style" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!--probar -->
+
+
+
+
+</head>
+
+<body>
+  <header class="header">
+
+    <div class="contenedor">
+      <section class="header__logo">
+        <img class="imagen__logo" src="img/d4-logo-002.webp" alt="logo" />
+      </section>
+    </div>
+    <section>
+      <nav class="navegacion">
+        <a href="#Artistas" class="nav__enlace">Artistas</a>
+        <a href="#Artworks" class="nav__enlace">Artworks</a>
+        <a href="contacto.html" class="nav__enlace">Contacto</a>
+        <!--buscador-->
+        <!--
+                <form action="" class="">
+              <input type="search" required>
+              <i class="fa fa-search"></i>
+            </form>
+            -->
+      </nav>
+    </section>
+  </header>
+  <section class="contenedor contenido-principal"></section>
+  <main>
+    <div class="imagen__fondo">
+      <section class="contenedor__oculto">
+        <script src="js/scriptLetters.js"></script>
+        <h1 class="titulo" onmouseover="fadein()" onmouseout="fadeout()">El arte en Diablo</h1>
+        <p class="textoescondido">Muchas veces lo unico que queremos de un videojuego es, por supuesto jugar. Pocas
+          veces nos paramos a observar el arte o escenarios que componen al videojuego.
+          En diablo podemos obervar algunas referencias a artistas y estilos clasicos como pueden ser por ejemplo, el
+          tenebrimo de Caravaggio entre otros.
+          Esta presente en algunas obras composiciones con tematica religiosa donde podemos ver a angeles y demonios
+          mezclados entre si.
+          En esta web hablaremos sobre, como el arte clasico ha influido en las composiciones de la saga diablo,
+          centrandonos en la ultima entrega, Diablo IV.
+        </p>
+        <button class="leermas" onclick="toggleText()">Comprimir</button>
+        <script src="js/OpenText.js"></script>
+      </section>
+    </div>
+    <!--IMAGENES-->
+    <div class="fondo__Secciones">
+      <!--IMAGENES JS AMPIABLE-->
+      <script src="js/OpenImgs.js"></script>
+      <!--<button class="boton__oculto" onclick="ampliar()">Saber mas</button>-->
+      <div class="contenedor__img__centrado">
+        <div class="contenedor__img">
+        <!--NO BORRAR imagen__bloque PQ SE ROMPEN LAS PUTAS FOTOS BECAUSE YES-->
+        <section class="imagen__bloque">
+
+          <img class="imagenes" id="img1" onmouseover=BorderMouse() onmouseout="BorderMouseOut()"
+            src="img/c45104951cb8c1cd707cb6728fe48e79_6366761029adead8c6a08c8927fcc898.webp" alt="img__1"
+            onclick="ampliar()" ondblclick="reducir()">
+        </section>
+        <section class="imagen__bloque">
+          <img class="imagenes" onmouseover=BorderMouse2() onmouseout="BorderMouseOut2()"
+            src="img/heroes_blizzcon_2019-pc-games.webp" alt="img__2" onclick="ampliar2()" ondblclick="reducir2()">
+        </section>
+        <section class="imagen__bloque">
+          <img class="imagenes" onmouseover=BorderMouse3() onmouseout="BorderMouseOut3()"
+            src="img/diablo-4-hawezar-artwork.webp" alt="img__3" onclick="ampliar3()" ondblclick="reducir3()">
+        </section>
+        <section class="imagen__bloque">
+          <img class="imagenes" onmouseover=BorderMouse4() onmouseout="BorderMouseOut4()"
+            src="img/article-1280x720.10611d98.webp" alt="img__4" onclick="ampliar4()" ondblclick="reducir4()">
+        </section>
+      </div>
+      </div>
+      
+      <!--
+        <section>
+        <a href="#ampli" onclick="ampli()">
+          <button class="boton__lista">1</button>
+        </a>
+        <button class="boton__lista">Heroes</button>
+        <button class="boton__lista">Saber mas</button>
+        <button class="boton__lista">Saber mas</button>
+        <button class="boton__lista">Lilith</button>
+      </section>
+      -->
+      
+      <!--contenedor imagen lilith-->
+      <img class="imagen__lilith modalImg" src="img/Inarius-and-Lilith.webp" id="ampli" alt="Inarius & Lilith">
+      <!--TEXTOS LORE-->
+      <div class="contenedores">
+        <section class="descripciones descripciones--innerContainer">
+          <i>
+            <h2 class="descripciones--titulo tituloLore animate__animated animate__fadeInLeft">
+              LORE:
+            </h2>
+            <h2 class="descripciones--titulo" onmouseover="letras()">
+              El Declive de los Altos Cielos
+            </h2>
+            <script src="js/scriptLetters.js"></script>
+          </i>
+          <p id="descripciones--textos">En el principio de los tiempos, El arcangel <b>Inarius y Lilith</b> la hija del
+            odio.
+            Consumaron su amor entre angeles y demonios, es asi como nacieron los <b>Nephalem</b>, los llamados los
+            <i>ancestros de la humanidad</i>
+            estos descendientes de angeles y demonios, fueron conisderados por los altos cielos como una blasfemia.
+            Estos seres abyectos generaron el llamado <i><q><b>Conflicto Eterno</b></q></i>en el cual el <b> Consejo de
+              Angiris y los Prive Evils</b>
+            Defendieron que los Nephalem eran un sacrilegio.
+            Esto hizo que que la mayor parte de los hijos de <b>Lilith</b> fuesen exterminados.
+          </p>
+        </section>
+      </div>
+      <div class="contenedores">
+        <section class=" descripciones descripciones--innerContainer">
+          <i>
+            <h2 class="descripciones--titulo">
+              El Conflicto Eterno
+            </h2>
+          </i>
+          <p id="descripciones--textos"> La primera obra consta de la siguiente <a href="#img1" onclick="ampliar()">
+              composición</a>. En esta obra se aprecia una batalla angeles y demonios, esta obra podría
+            reflejar lo que se conoce como <q>El conflicto eterno</q>.
+            En cuanto a lo artistico podemos ver que el/la autor/a toma por la manera en la que la composición esta
+            realizada rasgos del arte
+            renacentista; esto lo podemos ver en la manera en la que la anatomia esta dibujaba de manera precisa con un
+            gran maracado en los cuerpos.
+            Además de ello, hay en la pintura cierta reminiscencia a el arte barroco, esto se puede ver en la carga de
+            la escena, y colores usados. que tratan de
+            exaltar la escena persé, como es en este caso el Conflicto de Angeles y demonios.
+          </p>
+        </section>
+      </div>
+      <div class="contenedores">
+        <section class="descripciones descripciones--innerContainer">
+          <i>
+            <h2 class="descripciones--titulo descripciones--titulo--nephalem">
+              Guerra de los Nephalem
+            </h2>
+          </i>
+          <p id="descripciones--textos"> La Segunda obra consta de la siguiente <a href="#img1" onclick="ampliar2()">
+              composición</a>. En esta obra tiene cierta similitud con la primera de la lista, en lo que a la anatomía
+            se refiere
+            en cuanto a un poco de lore de esta obra; se podría decir que después de la creación de santuario y la
+            aparición de los Nephalem.
+            En cuanto a referencias artisticas continuamos en los estilos barrocos, manteniendo la remarcada anatomia de
+            los cuerpos y la excesiva carga de la composición</p>
+        </section>
+      </div>
+      <div class="contenedores">
+        <section class="descripciones descripciones--innerContainer">
+          <i>
+            <h2 class="descripciones--titulo">
+              Ruinas Inhóspitas
+            </h2>
+          </i>
+          <p id="descripciones--textos"> La Tercera obra consta de la siguiente <a href="#img1" onclick="ampliar3()">
+              composición</a>. Esta obra es diferente en cuanto a estilos, las anteriores tenian un acercamiento a los
+            estilos barrocos y renacentistas,
+            y por contraparte esta obra tiene unas pinceladas un tanto mas impresionistas y del siglo XIX, ya que estas
+            pinturas contienen mas humedad en sus pinceladas.
+            Aun asi podemos ver tambien en el fondo tecnicas del arte renacentista por ejemplo, el <b>sfumatto</b> en el
+            fondo, propio artistas clasicos como Leonardo Da vinci</p>
+        </section>
+      </div>
+      <div class="contenedores">
+        <section class="descripciones descripciones--innerContainer">
+          <i>
+            <h2 class="descripciones--titulo descripciones--titulo--nigromante">
+              Nigromante
+            </h2>
+          </i>
+          <p id="descripciones--textos"> La Cuarta obra consta de la siguiente <a href="#img1" onclick="ampliar4()">
+              composición</a>.
+            Esta obra es de la lista anterior la mas <q>moderna</q> ya que es una agrupación de estilos, consiguiendo
+            asi un realismo mas fiel a la realidad a pesar de estar mas cercano a el arte moderno.
+            esta pintura es como se le denomia en el mundo de la ilustracion <q>una pintura de manchas</q>, es decir, es
+            aquella obra que es realizada desde un principio por manchas de color sin necesidad
+            de realizar un trazo que sirva de guía a el artista.
+            Realizar este estilo es le proporciona a la obra mas <q>aire</q>, dandole asi un toque mas realista.
+          </p>
+        </section>
+      </div>
+      <div>
+        <!--ARTISTAS-->
+        <section class="secciones--Artistas">
+          <h3 id="Artistas">Artistas</h3>
+          <div class="estilos--contenedor--Artistas">
+            <img src="img/RobSevillaArtistaDiablo4.webp" alt="rob">
+            <img src="img/JairoSanchezArtistaDiablo4.webp" alt="Jairo">
+            <img src="img/CoreyPeaglerArtistaDiablo4.webp" alt="Corey" ">
+            </div>
+        </section>
+        <section>
+          <div>
+            <p>
+              <i class=" leyenda--artistas">
+            Estos son algunos de los LeadArtist que trabajaron en el arte de diablo 4
+            </i>
+            </p>
+          </div>
+        </section>
+        <!--GALERIA DE ARTWORKS-->
+       
+        <section class="secciones--Artworks">
+          <h3 id="Artworks">Artworks</h3>
+
+          <div class="estilos--contenedor--Artworks">
+            <figure>
+              <img class="imagenes modalImg" src="img/lilithartwork.webp" alt="Lilith">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/artwork2.jpg" alt="Female Barbarian Desing">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img//d4-barbarian-key-art.webp" alt="Barbarian">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-demon-concept.webp" alt="Demon Concept">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img//d4-druid-key-art.webp" alt="Druid">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-druid-legendary-armor3.webp" alt="Druid Legendary Set RANK (3º)">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-necromancer-key-art.webp" alt="Necromancer">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-rogue-key-artwork.webp" alt="Rogue">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-sorceress-key-art.webp" alt="Sorcerer">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-barbarian-legendary-armor2.webp" alt="Barbarian Legendary Set RANK (2)">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-book-of-lorath.webp" alt="Book Of Lorath">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/Canibals.webp" alt="Enemies(Canibals)">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-druid-legendary-armor1.webp" alt="Druid Legendary Set RANK (1º)">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-druid-legendary-armor2.webp" alt="Druid Legendary Set RANK (2º)">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-legendaries.webp" alt="Legendary Weapons">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/Art4.webp" alt="Fractured Peaks">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/art7.webp" alt="Barbarian Desings">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/d4-sorceress-legendary-armor1.webp" alt="Sorcerer Legendary Set (1)">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-cathedral.webp" alt="Cathedral">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-cultists.large.webp" alt="Cultists">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-farm.large.webp" alt="Farm">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-goatmen.large.webp" alt="Goatmen">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-hell-gate.webp" alt="Hell Gate">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-hell.large.webp" alt="Hell">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-horse.large.webp" alt="Horse Desing">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-skeletons.webp" alt="Skeletons">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-snow.large.webp" alt="Snowy Settlement">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg" src="img/diablo-4-swamp.webp" alt="Swamps">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/art8.webp" alt="Treasure goblin">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/bust.webp" alt="Class busts desing">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/bust2.webp" alt=" Female Sorcerer Bust(1)">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/bust3.webp" alt=" Female Sorcerer bust (2)">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/Captura-de-pantalla-(1823).webp" alt="Drowners">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/d4_gulraan_dry_steppes_art.webp" alt="Dry Steppes">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/artwork 3.webp" alt="Hunter">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/d4_scosglen_undead_castle_art.webp" alt="Scosglen">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/d4-fractured-peaks-road.webp" alt="Snowy road">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/d4_fracturedpeaks_cathedraloflight_01.webp" alt="Cathedral of Light">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/d4_load_screen_kehjistan_02.webp" alt="Kehjistan">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/d4_scosglen_undead_castle_art.webp" alt="Undead Castle">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/d4-rogue-key-art.webp" alt="Rogue Artwork">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/diabdemon.webp" alt="Demons">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/diablo-4-duriel.large.webp" alt="Duriel">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/Diablo-4-Season-1-release-date,-Season-of-the-Malignant-details-cover.webp" alt="Ritual">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/Diablo-Demons-Cathedral.webp" alt="Cathedral">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/largeimginarius.webp" alt="Lilith & Inarius">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/mago.webp" alt="Male Sorcerer Desing">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/malebbr.webp" alt="Male Barbarian Desing">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/river.webp" alt="River of Scosglen">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/sketch.webp" alt="Sketches">
+            </figure>
+            <figure>
+              <img class="imagenes modalImg"
+                src="img/d4_hawezar_cinder_wastes_02.webp" alt="Hawezar">
+            </figure>
+          </div>
+        </section>
+      </div>
+      <!--
+        <div>
+        <section>
+          <h2 class="estilos--titulo">
+            LEAD ARTIST
+          </h2>
+          <div class="estilos--contenedor">
+              <img src="img/RobSevillaArtistaDiablo4.webp" alt="rob">
+              <img src="img/JairoSanchezArtistaDiablo4.webp" alt="Jairo">
+              <img src="img/CoreyPeaglerArtistaDiablo4.webp" alt="Corey">
+          </div>
+        </section>
+      </div>
+      -->
+      <!--PRUEBA
+     <div class="contenedorPrueba">
+      <section class="contenedorPruebaSecciones"">
+        <i>
+          <h2 class="descripciones--titulo">
+              El Conflicto Eterno
+          </h2>
+        </i>
+       <p id="descripciones--textos">En el principio de los tiempos, El arcangel <b>Inarius y Lilith</b> la hija del odio.
+        Consumaron su amor entre angeles y demonios, es asi como nacieron los  <b>Nephalem</b>, los llamados los <i>ancestros de la humanidad</i>
+        estos descendientes de angeles y demonios, fueron conisderados por los altos cielos como una blasfemia.
+        Estos seres abyectos generaron el llamado <i><q><b>Conflicto Eterno</b></q></i>en el cual el  <b> Consejo de Angiris y los Prive Evils</b>
+        Defendieron que los Nephalem  eran un sacrilegio.
+        Esto hizo que que la mayor parte de los hijos de <b>Lilith</b>  fuesen exterminados. 
+       </p>
+      </section>
+      <section class="contenedorPruebaSecciones">
+        <i>
+          <h2 class="descripciones--titulo">
+              El Conflicto Eterno
+          </h2>
+        </i>
+        <p>En el principio de los tiempos, El arcangel <b>Inarius y Lilith</b> la hija del odio.
+          Consumaron su amor entre angeles y demonios, es asi como nacieron los  <b>Nephalem</b>, los llamados los <i>ancestros de la humanidad</i>
+          estos descendientes de angeles y demonios, fueron conisderados por los altos cielos como una blasfemia.
+          Estos seres abyectos generaron el llamado <i><q><b>Conflicto Eterno</b></q></i>en el cual el  <b> Consejo de Angiris y los Prive Evils</b>
+          Defendieron que los Nephalem  eran un sacrilegio.
+          Esto hizo que que la mayor parte de los hijos de <b>Lilith</b>  fuesen exterminados. 
+      <a href="#img1" accesskey="w" onclick="ampliar()"> composición</a>
+      </p>
+      </section>
+      <section class="contenedorPruebaSecciones">
+        <i>
+          <h2 class="descripciones--titulo">
+              El Conflicto Eterno
+          </h2>
+        </i>
+        <p>En el principio de los tiempos, El arcangel <b>Inarius y Lilith</b> la hija del odio.
+          Consumaron su amor entre angeles y demonios, es asi como nacieron los  <b>Nephalem</b>, los llamados los <i>ancestros de la humanidad</i>
+          estos descendientes de angeles y demonios, fueron conisderados por los altos cielos como una blasfemia.
+          Estos seres abyectos generaron el llamado <i><q><b>Conflicto Eterno</b></q></i>en el cual el  <b> Consejo de Angiris y los Prive Evils</b>
+          Defendieron que los Nephalem  eran un sacrilegio.
+          Esto hizo que que la mayor parte de los hijos de <b>Lilith</b>  fuesen exterminados. 
+      <a href="#img1" accesskey="w" onclick="ampliar2()"> composición</a>
+      </p>
+      </section>
+      <section class="contenedorPruebaSecciones">
+        <i>
+          <h2 class="descripciones--titulo">
+              El Conflicto Eterno
+          </h2>
+        </i>
+        <p>En el principio de los tiempos, El arcangel <b>Inarius y Lilith</b> la hija del odio.
+          Consumaron su amor entre angeles y demonios, es asi como nacieron los  <b>Nephalem</b>, los llamados los <i>ancestros de la humanidad</i>
+          estos descendientes de angeles y demonios, fueron conisderados por los altos cielos como una blasfemia.
+          Estos seres abyectos generaron el llamado <i><q><b>Conflicto Eterno</b></q></i>en el cual el  <b> Consejo de Angiris y los Prive Evils</b>
+          Defendieron que los Nephalem  eran un sacrilegio.
+          Esto hizo que que la mayor parte de los hijos de <b>Lilith</b>  fuesen exterminados. 
+      <a href="#img1" accesskey="w" onclick="ampliar3()"> composición</a>
+      </p>
+      </section>
+      <section class="contenedorPruebaSecciones">
+        <i>
+          <h2 class="descripciones--titulo">
+              El Conflicto Eterno
+          </h2>
+        </i>
+        <p>En el principio de los tiempos, El arcangel <b>Inarius y Lilith</b> la hija del odio.
+          Consumaron su amor entre angeles y demonios, es asi como nacieron los  <b>Nephalem</b>, los llamados los <i>ancestros de la humanidad</i>
+          estos descendientes de angeles y demonios, fueron conisderados por los altos cielos como una blasfemia.
+          Estos seres abyectos generaron el llamado <i><q><b>Conflicto Eterno</b></q></i>en el cual el  <b> Consejo de Angiris y los Prive Evils</b>
+          Defendieron que los Nephalem  eran un sacrilegio.
+          Esto hizo que que la mayor parte de los hijos de <b>Lilith</b>  fuesen exterminados. 
+      <a href="#img1" accesskey="w" onclick="ampliar4()"> composición</a>
+      </p>
+      </section>
+    </div>
+    -->
+  </main>
+</body>
+
+</html>
